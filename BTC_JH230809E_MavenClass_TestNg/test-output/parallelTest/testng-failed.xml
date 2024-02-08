@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [parallelTest]" parallel="methods">
+  <test name="passArgumentFromXML(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.bit.sample.BaseTest">
+        <methods>
+          <include name="openBrowser2"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.bit.sample.BaseTest -->
+    </classes>
+  </test> <!-- passArgumentFromXML(failed) -->
+</suite> <!-- Failed suite [parallelTest] -->

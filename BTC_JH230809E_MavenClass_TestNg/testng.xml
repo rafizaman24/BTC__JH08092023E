@@ -1,0 +1,86 @@
+<suite name="testSuite">
+
+<!-- run any package 
+
+	<test name="packageRun">
+		<packages>
+			<package name="com.bit.sample">	</package>
+			<package name="com.bit.sample.copy">	</package>
+		</packages>
+	</test>
+	
+end of Comment-->
+
+<!-- Run a specific class or group of classes 
+
+	<test name="runASingleClass">
+		<classes>
+			<class name="com.bit.sample.copy.TestNgAnnotations"></class>
+			<class name="com.bit.sample.TestNgAnnotations"></class>
+		</classes>
+	</test>
+end of comment-->
+
+<!-- run a specific method or group of methods 
+
+	<test name="runGroupOfMethodsOrASingleMethod">
+		<classes>
+			<class name="com.bit.sample.TestNgAnnotations">
+				<methods>
+					<include name="test20"></include>
+					<include name="test23"></include>
+					
+					<exclude name="test21"></exclude>
+					<exclude name="test22"></exclude>
+					
+				</methods>
+			</class>
+			<class name="com.bit.sample.copy.TestNgAnnotations">
+				<methods>
+					<include name="test20"></include>
+					
+					<exclude name="test21"></exclude>
+					<exclude name="test22"></exclude>
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+end of comment-->	
+
+
+<!-- run a specific group or list of groups -->
+	<test name="GroupTestRun">
+	
+		<groups>
+			<run>
+				<include name="regression"> </include>
+				<include name="smoke"> </include>
+				<include name="sanity"> </include>
+				<include name="intigration"> </include>
+		<!--	<exclude name="smoke"></exclude> -->
+			</run>
+		
+		</groups>
+		<packages>
+			<package name="com.bit.sample">	</package>
+			<package name="com.bit.sample.copy"> </package>
+		</packages>
+	
+	</test>
+
+<!-- TBD
+parallel test 
+pass parameter from XML file 
+suite arguments 
+how to run failed test cases
+TestNg Report
+group test
+
+
+to see the fail test xml file or to see the report, always refresh the project after run
+
+
+-->
+
+</suite>

@@ -1,0 +1,57 @@
+<suite name="parallelTest" parallel="methods">
+
+<!-- 
+https://testng.org/doc/documentation-main.html#parallel-suites
+<suite name="My suite" parallel="methods" thread-count="5">
+<suite name="My suite" parallel="tests" thread-count="5">
+<suite name="My suite" parallel="classes" thread-count="5">
+<suite name="My suite" parallel="instances" thread-count="5">
+ -->
+<!-- 
+	<test name="runMethodsParallel">
+		<classes>
+			<class name="com.bit.sample.BaseTest"> 
+				<methods>
+					<include name="openBrowser"></include>
+					<include name="openBrowser2"></include>
+				</methods>
+			</class>
+			
+		</classes>
+	</test>
+end of comment -->	
+
+<!-- 	
+	<test name="runClassesParallel">
+		<classes>
+			<class name="com.bit.sample.BaseTest"> </class>
+			
+		</classes>
+	
+	</test>
+	
+end of comment  -->	
+
+	<test name="passArgumentFromXML">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="webSite" value="http://www.macys.com"></parameter>
+		<classes>
+			<class name="com.bit.sample.BaseTest"> </class>
+		<!-- 
+			<methods>
+				<method>
+					<include name="passParameter"></include>
+				
+				</method>
+			
+			</methods>
+		 -->
+		</classes>
+	
+	
+	</test>
+
+
+
+	
+</suite>
